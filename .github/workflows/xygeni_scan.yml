@@ -6,7 +6,7 @@ name: Xygeni CI/CD Security Scan
 on:
   push: 
     branches: [ "main" ]
-  # Triggers the workflow on pull request events for the "main" branch.
+  # Triggers the workflow on pull request events for the "main" branch. 
   pull_request_target: 
     branches: [ "main" ]
 
