@@ -52,7 +52,7 @@ jobs:
               echo XY_PASSWORD=${{ secrets.XY_PASSWORD_PRO }} >> $GITHUB_ENV
               echo XY_URL=${{ secrets.XY_URL_PRO }} >> $GITHUB_ENV
               ;;
-            PRO)
+            PRO_TRIAL)
               echo "PRO_TRIAL"
               echo XY_USERNAME=${{ secrets.XY_USERNAME_PRO_TRIAL }} >> $GITHUB_ENV
               echo XY_PASSWORD=${{ secrets.XY_PASSWORD_PRO_TRIAL }} >> $GITHUB_ENV
