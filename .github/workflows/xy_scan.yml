@@ -92,10 +92,18 @@ jobs:
           fetch-depth: '0'
 
 
+      - name: Check out repo A
+        uses: actions/checkout@v4
+        with:
+            repository: xygeni/xyware-goat
+            path: path_to_A
+
       # Runs a set of commands using the runners shell 
       - name: Download Xygeni Scanner 
         run: |
           echo Downloading Xygeni Scanner ....
+          ls -l
+          exit 1
 
           #curl -L https://get.xygeni.io/latest/scanner/install.sh | /bin/bash -s -- -u $XY_USERNAME -p $XY_PASSWORD -s $XY_URL -d ${GITHUB_WORKSPACE}/scanner 
           curl -L https://get.xygeni.io/latest/scanner/install.sh | /bin/bash -s -- -u $XY_USERNAME -p $XY_PASSWORD -s $XY_URL -d ${GITHUB_WORKSPACE}/scanner 
