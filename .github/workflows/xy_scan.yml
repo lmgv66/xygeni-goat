@@ -97,6 +97,7 @@ jobs:
         with:
             repository: xygeni/xyware-goat
             path: path_to_A
+            ref: master
 
       # Runs a set of commands using the runners shell 
       - name: Download Xygeni Scanner 
