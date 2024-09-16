@@ -96,7 +96,7 @@ jobs:
         uses: actions/checkout@v4
         with:
             repository: lgvorg1/xyware-goat
-            path: path_to_A
+            path: path_to_xyware.goat
             ref: master
             token: ${{ secrets.GH_PAT }}
 
@@ -104,8 +104,6 @@ jobs:
       - name: Download Xygeni Scanner 
         run: |
           echo Downloading Xygeni Scanner ....
-          ls -l
-          exit 1
 
           #curl -L https://get.xygeni.io/latest/scanner/install.sh | /bin/bash -s -- -u $XY_USERNAME -p $XY_PASSWORD -s $XY_URL -d ${GITHUB_WORKSPACE}/scanner 
           curl -L https://get.xygeni.io/latest/scanner/install.sh | /bin/bash -s -- -u $XY_USERNAME -p $XY_PASSWORD -s $XY_URL -d ${GITHUB_WORKSPACE}/scanner 
