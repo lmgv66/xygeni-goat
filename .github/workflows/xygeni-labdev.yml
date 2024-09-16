@@ -1,6 +1,6 @@
 name: Xygeni Scan
 on:
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:  # Allows manual triggering 
   # no push triggers
   pull_request:
     branches:
