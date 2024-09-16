@@ -131,8 +131,8 @@ jobs:
       - name: Execution Xygeni Scanner (vuln)
         run: |
           echo Executing Xygeni scan ....    
-          #--no-conf-download 
-          ${GITHUB_WORKSPACE}/scanner/xygeni scan  --never-fail  -f json -o reports/my_project --include-collaborators --run="inventory,misconf,codetamper,deps,suspectdeps,secrets,compliance,iac,malware" -n ${{ env.XY_PRJ_NAME }} --dir ${GITHUB_WORKSPACE} -e **/scanner/**,**/repos/**
+          #--no-conf-download  malware
+          ${GITHUB_WORKSPACE}/scanner/xygeni scan  --never-fail  -f json -o reports/my_project --include-collaborators --run="inventory,misconf,codetamper,deps,suspectdeps,secrets,compliance,iac" -n ${{ env.XY_PRJ_NAME }} --dir ${GITHUB_WORKSPACE} -e **/scanner/**,**/repos/**
         env:
           GITHUB_PAT: ${{ secrets.GH_PAT }}
 
