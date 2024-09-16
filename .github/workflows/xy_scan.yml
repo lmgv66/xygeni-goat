@@ -95,7 +95,7 @@ jobs:
       - name: Check out repo A
         uses: actions/checkout@v4
         with:
-            repository: xygeni/xyware-goat
+            repository: lgvorg1/xyware-goat
             path: path_to_A
             ref: master
 
