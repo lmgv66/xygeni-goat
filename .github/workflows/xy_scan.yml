@@ -18,7 +18,9 @@ on:
           description: Xygeni Env
           options: 
           - PRO
+          - PRO_TRIAL
           - DEMO
+          - DEMO_TRIAL
           - PARTNERS
           default: PRO
  
@@ -50,11 +52,23 @@ jobs:
               echo XY_PASSWORD=${{ secrets.XY_PASSWORD_PRO }} >> $GITHUB_ENV
               echo XY_URL=${{ secrets.XY_URL_PRO }} >> $GITHUB_ENV
               ;;
+            PRO)
+              echo "PRO_TRIAL"
+              echo XY_USERNAME=${{ secrets.XY_USERNAME_PRO_TRIAL }} >> $GITHUB_ENV
+              echo XY_PASSWORD=${{ secrets.XY_PASSWORD_PRO_TRIAL }} >> $GITHUB_ENV
+              echo XY_URL=${{ secrets.XY_URL_PRO_TRIAL }} >> $GITHUB_ENV
+              ;;
             DEMO)
               echo "DEMO"
               echo XY_USERNAME=${{ secrets.XY_USERNAME_DEMO }} >> $GITHUB_ENV
               echo XY_PASSWORD=${{ secrets.XY_PASSWORD_DEMO }} >> $GITHUB_ENV
               echo XY_URL=${{ secrets.XY_URL_DEMO }} >> $GITHUB_ENV
+              ;;
+            DEMO_TRIAL)
+              echo "DEMO_TRIAL"
+              echo XY_USERNAME=${{ secrets.XY_USERNAME_DEMO_TRIAL }} >> $GITHUB_ENV
+              echo XY_PASSWORD=${{ secrets.XY_PASSWORD_DEMO_TRIAL }} >> $GITHUB_ENV
+              echo XY_URL=${{ secrets.XY_URL_DEMO_TRIAL }} >> $GITHUB_ENV
               ;;
             PARTNERS)
               echo "PARTNERS"
